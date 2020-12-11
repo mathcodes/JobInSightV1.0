@@ -1,0 +1,11 @@
+.clothes-thumbnail-item {
+  display: grid;
+  grid-template-rows: 1fr 2fr 5fr;
+  background-image: url("./assets/Container.png");
+  background-repeat: no-repeat;
+  background-size: 20rem 40rem;
+  background-size: contain;
+  height: 300px;
+  width: 350px;
+  margin: 2rem auto;
+}

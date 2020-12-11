@@ -1,0 +1,125 @@
+.register-container, .login-container {
+  align-content: center;
+  position: relative;
+}
+
+.register-container p {
+  margin-bottom: 2rem;
+}
+
+.form-header h1 {
+  margin-top: 5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+p {
+  text-align: center;
+}
+
+.form-container {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.register-form, .login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0rem;
+  margin-top: 4rem;
+  margin: 0 auto;
+}
+
+.form-control {
+  outline: 0;
+  border: none;
+  border-width: 0 0 2px;
+  border-color: #fff;
+  border-bottom: 3px solid #fff;
+  background-color: transparent;
+  font-size: 1rem;
+  margin: 4rem 2rem;
+  width: 20rem;
+  transition: 0.5s ease-in-out;
+}
+
+.form-control:focus {
+  border-bottom-color:  #ffff00;
+  color: #fff;
+}
+
+input {
+  color: #fff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.register-btn {
+  margin-top: 1rem;
+  height: 48px;
+  width: 190px;
+  border-radius: 1.6rem;
+  background-image: url("./assets/Register_button.png");
+  background-repeat: no-repeat;
+  background-size: 150px 40px;
+  background-size: contain;
+  cursor: pointer;
+  margin: 4rem auto;
+  grid-column: 1 / -1;
+}
+
+.login-btn {
+  margin-top: 1rem;
+  height: 48px;
+  width: 190px;
+  border-radius: 1.6rem;
+  background-image: url("./assets/Login_button.png");
+  background-repeat: no-repeat;
+  background-size: 150px 40px;
+  background-size: contain;
+  cursor: pointer;
+  margin: 4rem auto;
+  grid-column: 1 / -1;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.link {
+  color: #ffff00;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+small {
+  color: tomato;
+  margin-left: 2rem;
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .register-form, .login-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0rem;
+    margin-top: 4rem;
+    margin: 0 auto;
+  }
+}

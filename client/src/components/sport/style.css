@@ -1,0 +1,128 @@
+.sport-header {
+  margin-top: 3rem;
+}
+
+.sport-header h1 {
+  display: block;
+  text-align: left;
+  padding-left: 4rem;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.sport-form-container {
+  margin-top: 6rem;
+}
+
+.sport-form-group {
+  position: relative;
+  margin-top: 4rem;
+  margin: 0 auto;
+}
+
+.sport-content {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sport-content h2 {
+  margin-left: 4rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.sport-form-container input[type="text"] {
+  display: block;
+  margin: 0 auto;
+  font-size: 3.2rem;
+}
+
+.teams-beaten span {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-left: 4rem;
+  list-style: none;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: 0.2s ease-in;
+}
+
+.team-appear {
+  opacity: 0.01;
+}
+
+.team-appear.team-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-out;
+}
+
+.team-enter {
+  opacity: 0.01;
+}
+
+.team-enter.team-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+}
+
+.team-leave {
+  opacity: 1;
+}
+
+.team-leave.team-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-out;
+}
+
+.teams-beaten li {
+  margin: 1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+@media only screen and (max-width: 978px) {
+  .sport-form .form-control {
+    width: 15rem;
+  }
+
+  .sport-form-container input[type="text"] {
+    display: block;
+    margin: 0 auto;
+    font-size: 2.2rem;
+  }
+
+  .teams-beaten span {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    list-style: none;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: 0.2s ease-in;
+  }
+
+  .sport-header h1 {
+    display: block;
+    text-align: center;
+    padding-left: 0rem;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+
+}
