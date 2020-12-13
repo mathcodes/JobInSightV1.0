@@ -57,19 +57,19 @@
 }
 
 .form-control {
-  outline: 0;
+
   border: none;
-  border-width: 0 0 2px;
+  border-width: 5px;
   border-color: #fff;
   border-bottom: 3px solid #fff;
-  background-color: transparent;
+  background-color: white;
   font-size: 1rem;
   margin: 4rem 2rem;
   width: 30rem;
 }
 
 .form-control:focus {
-  border-bottom-color:  #ffff00;
+  border-bottom-color:  #25274D;
   color: #fff;
 }
 

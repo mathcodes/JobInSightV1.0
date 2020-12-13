@@ -63,7 +63,7 @@ class Login extends Component {
       <React.Fragment>
         <div className="register-container">
           <div className="form-header">
-            <h1>Dev Challenge</h1>
+            <h1>J o b I n S i g h t</h1>
           </div>
           <div className="form-container">
             <form className="login-form" onSubmit={this.handleSubmit}>
@@ -90,7 +90,7 @@ class Login extends Component {
               <button type="submit" className="login-btn"/>
             </form>
           </div>
-          <p>New to the challenge? 
+          <p className="linkBtn">Ready for your Future of Fortune?
             <Link className="link" to="/register"> Sign Up</Link></p>
         </div>
       </React.Fragment>
