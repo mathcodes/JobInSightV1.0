@@ -6,8 +6,9 @@
   position: relative;
 }
 
-.register-container p {
+.register-container {
   margin-bottom: 2rem;
+  color:black;
 }
 
 .form-header h1 {
@@ -34,25 +35,37 @@ p {
   grid-gap: 0rem;
   margin-top: 4rem;
   margin: 0 auto;
+  color:black;
 }
-
 .form-control {
-  border-width: 2px;
-  border-color: #25274D;
+  border-width: 5px;
+  border-color: black;
+  font-size: 1rem;
+  /* margin: 4rem 2rem; */
+  width: 30rem;
   border: 3px solid;
+  color:black;
   background-color: white;
   font-size: 1rem;
-  margin: 4rem 2rem;
+  /* margin: 4rem 2rem; */
   width: 15rem;
-  transition: 0.5s ease-in-out;
+  height: 2rem;
+  padding:10px;
+  /* animates rounded corners when you're done typing */
+  transition: 2.0s ease-in-out;
+  border-radius: 1.2rem;
 }
 
 .form-control:focus {
-  border-bottom-color: #9CB700;
-  color: #fff;
+  border-color: #black;
+  border-radius: 0rem;
 }
 
-input {
+.form-group{
+  margin:15px ;
+}
+
+.input {
   color: black;
 }
 
@@ -64,7 +77,7 @@ input:-webkit-autofill:active {
 }
 
 ::placeholder {
-  color: #fff;
+  color: red;
 }
 
 .register-btn {
@@ -72,7 +85,6 @@ input:-webkit-autofill:active {
   height: 48px;
   width: 190px;
   color:black;
-
   border-radius: 4px;
   border-radius: 1.6rem;
   background: #9CB700;
@@ -81,10 +93,11 @@ input:-webkit-autofill:active {
   cursor: pointer;
   margin: 4rem auto;
   grid-column: 1 / -1;
+  
 }
 
 .login-btn {
-  margin-top: 1rem;
+  margin-top: 10rem;
   height: 48px;
   width: 190px;
   color:black;
@@ -100,10 +113,16 @@ input:-webkit-autofill:active {
 
 button:hover {
   opacity: 0.8;
+
+}
+
+.formLabels{
+text-align: left;
+color:#9CB700;
+margin: 3px 0 1px 3px;
 }
 
 .link {
-  color: #9CB700;
   text-decoration: none;
   margin-bottom: 2rem;
   color:#9CB700;
@@ -111,8 +130,13 @@ button:hover {
 }
 
 .link:hover {
-  color: #fff;
-  font-size:1.2rem;font-weight:bold;
+  color: black;
+  font-size:1.2rem;
+  font-weight:bold;
+}
+
+.regSignIn{
+  color:black;
 }
 
 small {

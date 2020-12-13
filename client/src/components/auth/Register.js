@@ -6,13 +6,13 @@ import "./style.css";
 class Register extends Component {
 
   state = {
-    username: '',
+    username: 'username',
     usernameError: '',
     email: '',
     emailError: '',
-    password: '',
+    password: 'password',
     passwordError: '',
-    confirmPassword: '',
+    confirmPassword: 'confirm password',
     confirmPasswordError: '',
     errors: {},
     redirect: false
@@ -85,7 +85,10 @@ class Register extends Component {
     }
 
   }
-
+// ************************************************** //
+// *********************RENDERING******************** //
+// ************************************************** //
+// ************************************************** //
   render() {
     const { redirect } = this.state;
     if (redirect) {
@@ -101,52 +104,52 @@ class Register extends Component {
           <div className="form-container">
             <form onSubmit={this.onSubmit} className="register-form">
               <div className="form-group">
+              <p className="formLabels">User Name:</p>
                 <input
                   autocomplete="nope" 
                   type="text" 
                   name="username"
                   value={username}
                   onChange={this.handleChange}
-                  className="form-control" 
-                  placeholder="Username"/>
+                  className="form-control" />
                   <small>{this.state.usernameError}</small>
               </div>
               <div className="form-group">
+              <p className="formLabels">Email Address:</p>
               <input
                   autocomplete="nope" 
                   type="email" 
                   name="email"
                   value={email}
                   onChange={this.handleChange}
-                  className="form-control" 
-                  placeholder="Email"/>
+                  className="form-control" />
                   <small>{this.state.emailError}</small>
               </div>
               <div className="form-group">
+              <p className="formLabels">Password:</p>
               <input
                   autocomplete="nope" 
                   type="password" 
                   name="password"
                   value={password}
                   onChange={this.handleChange}
-                  className="form-control" 
-                  placeholder="Password"/>
+                  className="form-control" />
                   <small>{this.state.passwordError}</small>
               </div>
               <div className="form-group">
+              <p className="formLabels">Confirm Password:</p>
               <input
                   type="password" 
                   name="confirmPassword"
                   value={confirmPassword}
                   onChange={this.handleChange}
-                  className="form-control" 
-                  placeholder="Confirm password"/>
+                  className="form-control" />
                   <small>{this.state.confirmPasswordError}</small>
               </div>
-              <button type="submit" className="register-btn" />
+              <button type="submit" className="login-btn" >LOGIN</button>
             </form>
           </div>
-          <p>Already registered? 
+          <p className="linkBtn">Already registered? 
             <Link className="link" to="/login"> Sign In</Link></p>
         </div>
       </React.Fragment>

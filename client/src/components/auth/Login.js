@@ -50,7 +50,10 @@ class Login extends Component {
     
       }
   }
-
+// ************************************************** //
+// *********************RENDERING******************** //
+// ************************************************** //
+// ************************************************** //
   render() {
     const { redirect } = this.state;
     if (auth.isAuthenticated()) {
@@ -87,7 +90,7 @@ class Login extends Component {
                   className="form-control" 
                   placeholder="Password"/>
               </div>
-              <button type="submit" className="login-btn"/>
+              <button type="submit" className="login-btn">REGISTER</button>
             </form>
           </div>
           <p className="linkBtn">Ready for your Future of Fortune?
