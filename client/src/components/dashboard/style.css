@@ -10,19 +10,19 @@
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   /* grid-gap: 3rem; */
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 .logout-button {
   position: fixed;
   right: 1rem;
   top: 1rem;
-  background-color: tomato;
+  background-color: #9CB700;
   display: inline-block;
   color: #333;
   padding: 1rem 1.3rem;
   border-radius: 1rem;
-  border: none;
+  color:black;
   cursor: pointer;
   font-size: 1rem;
   outline: none;
