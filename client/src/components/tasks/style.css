@@ -56,22 +56,7 @@
   cursor: pointer;
 }
 
-.form-control {
-  outline: 0;
-  border: none;
-  border-width: 0 0 2px;
-  border-color: #fff;
-  border-bottom: 3px solid #fff;
-  background-color: transparent;
-  font-size: 1rem;
-  margin: 4rem 2rem;
-  width: 30rem;
-}
 
-.form-control:focus {
-  border-bottom-color:  #ffff00;
-  color: #fff;
-}
 
 .tasks-form-container input[type="text"] {
   display: block;
