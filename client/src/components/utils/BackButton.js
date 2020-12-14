@@ -10,7 +10,7 @@ export class BackButton extends Component {
     return (
       <React.Fragment>
         <button className="back-button" onClick={this.handleGoBack}>
-          Back
+        <h3><i class="fas fa-layer-group"></i></h3>
         </button>
       </React.Fragment>
     )
