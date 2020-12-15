@@ -46,19 +46,9 @@ class Login extends Component {
         errorMessage: "Invalid username or password",
       });
       this.props.loginBadRequest();
-<<<<<<< HEAD
     }
   };
-  // ************************************************** //
-  // *********************RENDERING******************** //
-  // ************************************************** //
-  // ************************************************** //
-=======
-    
-      }
-  }
 
->>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
   render() {
     const { redirect } = this.state;
     if (auth.isAuthenticated()) {
@@ -96,25 +86,18 @@ class Login extends Component {
                   placeholder="Password"
                 />
               </div>
-<<<<<<< HEAD
               <button type="submit" className="login-btn">
-                LOGIN
+                Login
               </button>
             </form>
           </div>
-          <p className="linkBtn">
-            Ready for your Future of Fortune?
+          <p>
+            New to the challenge?
             <Link className="link" to="/register">
+              {" "}
               Sign Up
             </Link>
           </p>
-=======
-              <button type="submit" className="login-btn">Login</button>
-            </form>
-          </div>
-          <p>New to the challenge? 
-            <Link className="link" to="/register"> Sign Up</Link></p>
->>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
         </div>
       </React.Fragment>
     );

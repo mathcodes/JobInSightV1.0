@@ -34,15 +34,11 @@
     "lodash": "^4.17.20",
     "mongoose": "^5.8.13",
     "multer": "^1.4.2",
-<<<<<<< HEAD
-    "multer-gridfs-storage": "^41.0.2",
-=======
     "multer-gridfs-storage": "^4.0.2",
     "popper.js": "^1.15.0",
     "react-icons": "^4.1.0",
     "react-intl": "^5.10.6",
     "react-pro-sidebar": "^0.4.4",
->>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
     "stream-reduce": "^1.0.3",
     "xml2js": "^0.4.23"
   },
