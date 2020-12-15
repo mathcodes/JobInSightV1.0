@@ -55,7 +55,7 @@ p {
 .form-control {
   border-width: 5px;
   border-color: black;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   /* margin: 4rem 2rem; */
   width: 30rem;
   border: 3px solid;
@@ -67,7 +67,7 @@ p {
   height: 2rem;
   padding:10px;
   /* animates rounded corners when you're done typing */
-  transition: 2.0s ease-in-out;
+  transition: .2s ease-in-out;
   border-radius: 1.2rem;
 }
 

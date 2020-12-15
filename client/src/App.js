@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,20 +13,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Tasks from './components/tasks/Tasks';
 import Photos from './components/photos/Photos';
 
-
 class App extends Component {
-
   state = {
+
     // sportData: {
     //   teamName: ''
     // },
     tasksData: {
-      tasks: []
+      tasks: [],
     },
     imageData: [],
     loggedInStatus: "NOT_LOGGED_IN",
-    
-  }
+  };
+
 
   // getTeamName = async () => {
   //   // get favourite team name from api
@@ -49,6 +49,7 @@ class App extends Component {
   //   }
   // }
 
+
   componentDidMount() {
     this.getImageData();
     this.getTasksData();
@@ -58,107 +59,119 @@ class App extends Component {
   // Get tasks data in App so we can pass as prop to Tasks & Dashboard components
   getTasksData = async (e) => {
     // get all the tasks for the current user
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     const headerConfig = {
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Authorization': `${token}`
-      }
-    }
-    const res = await axios.get('/api/tasks', headerConfig);
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        Authorization: `${token}`,
+      },
+    };
+    const res = await axios.get("/api/tasks", headerConfig);
     if (res.data.tasks) {
       this.setState({
         tasksData: {
-          tasks: [...res.data.tasks] || ""
-        }
+          tasks: [...res.data.tasks] || "",
+        },
       });
     }
-  }
+  };
 
   getImageData = async (e) => {
     // get all the images for the current user
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     const headerConfig = {
       headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Authorization': `${token}`
-      }
-    }
-    const res = await axios.get('/api/upload', headerConfig);
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        Authorization: `${token}`,
+      },
+    };
+    const res = await axios.get("/api/upload", headerConfig);
     if (res.data.images) {
       this.setState({
-        imageData: res.data.images
+        imageData: res.data.images,
       });
     }
-  }
+  };
 
   // update sport data passed from child (Sport) to parent state (App)
   updateSportData = (teamName) => {
     this.setState({
       sportData: {
-        teamName: teamName
-      }
+        teamName: teamName,
+      },
     });
-  }
+  };
 
   // update tasks data passed from child (Sport) to parent state (App)
   updateTasksData = () => {
     this.getTasksData();
-  }
+  };
 
   // update image data passed from child (Photos) to parent state (App)
   updateImageData = () => {
     this.getImageData();
-  }
+  };
 
   notFoundStyle = {
-    margin: '10rem',
-    color: '#8b0000'
-  }
-                                           
+
+    margin: "10rem",
+    color: "#8b0000",
+  };
+
+
   render() {
     // Toast Notifications
-    toast.configure({autoClose: 2000, draggable: false});
-    const sportBadRequest = () => toast.error('Team is invalid');
-    const sportGoodRequest = () => toast.success('Team has been updated');
-    const loginGoodRequest = () => toast.success('Logged in Successfully', {
-      position: toast.POSITION.TOP_LEFT
-    });
+    toast.configure({ autoClose: 2000, draggable: false });
+    const sportBadRequest = () => toast.error("Team is invalid");
+    const sportGoodRequest = () => toast.success("Team has been updated");
+    const loginGoodRequest = () =>
+      toast.success("Logged in Successfully", {
+        position: toast.POSITION.TOP_LEFT,
+      });
 
-    const loginBadRequest = () => toast.error('Invalid Credentials');
-    const registerGoodRequest = () => toast.success('Registered Successfully');
-    const registerBadRequest = () => toast.error('Registration Unsuccessful');
-    
-    const taskAddGoodRequest = () => toast.success('Task added successfully', {
-      position: toast.POSITION.TOP_CENTER
-    });
-    const taskAddBadRequest = () => toast.error('Task could not be added', {
-      position: toast.POSITION.TOP_CENTER
-    });
-    const taskDelGoodRequest = () => toast.warning('Task deleted successfully', {
-      position: toast.POSITION.TOP_CENTER
-    });
-    const taskDelBadRequest = () => toast.error('Task could not be deleted', {
-      position: toast.POSITION.TOP_CENTER
-    });
-    const taskEditGoodRequest = () => toast.info('Task edited successfully', {
-      position: toast.POSITION.TOP_CENTER
-    });
-    const taskEditBadRequest = () => toast.error('Task could not be edited', {
-      position: toast.POSITION.TOP_CENTER
-    });
+    const loginBadRequest = () => toast.error("Invalid Credentials");
+    const registerGoodRequest = () => toast.success("Registered Successfully");
+    const registerBadRequest = () => toast.error("Registration Unsuccessful");
 
-    const photoGoodRequest = () => toast.success('Image added Successfully', {
-      position: toast.POSITION.TOP_LEFT
-    });
+    const taskAddGoodRequest = () =>
+      toast.success("Task added successfully", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    const taskAddBadRequest = () =>
+      toast.error("Task could not be added", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    const taskDelGoodRequest = () =>
+      toast.warning("Task deleted successfully", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    const taskDelBadRequest = () =>
+      toast.error("Task could not be deleted", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    const taskEditGoodRequest = () =>
+      toast.info("Task edited successfully", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    const taskEditBadRequest = () =>
+      toast.error("Task could not be edited", {
+        position: toast.POSITION.TOP_CENTER,
+      });
 
-    const photoBadRequest = () => toast.error('Image could not be added', {
-      position: toast.POSITION.TOP_LEFT
-    });
+    const photoGoodRequest = () =>
+      toast.success("Image added Successfully", {
+        position: toast.POSITION.TOP_LEFT,
+      });
+
+    const photoBadRequest = () =>
+      toast.error("Image could not be added", {
+        position: toast.POSITION.TOP_LEFT,
+      });
 
     return (
+
     <Router>
       <div className="App">
         <div className="container">
@@ -182,17 +195,14 @@ class App extends Component {
             <Route path="/photos" 
               render={ (props) => <Photos {...props} photoGoodRequest={photoGoodRequest} photoBadRequest={photoBadRequest} triggerParentUpdate={this.updateImageData}
                       imageData={this.state.imageData} getImageData={this.getImageData}/>} />
+
               />
-            <Route path="/tasks"
-              render={(props) => <Tasks {...props} triggerParentUpdate={this.updateTasksData} tasks={this.state.tasksData.tasks} getTasksData={this.getTasksData}
-                                  taskAddGoodRequest={taskAddGoodRequest} taskAddBadRequest={taskAddBadRequest} taskDelGoodRequest={taskDelGoodRequest}
-                                  taskDelBadRequest={taskDelBadRequest} taskEditGoodRequest={taskEditGoodRequest} taskEditBadRequest={taskEditBadRequest}/>} />
-            <Route path="*" component={() => <h1 style={this.notFoundStyle}>404 Not Found</h1>} />
-          </Switch>
+              <Route path="*" component={() => <h1 style={this.notFoundStyle}>404 Not Found</h1>} />
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
-  );
+      </Router>
+    );
   }
 }
 
