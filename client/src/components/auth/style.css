@@ -19,6 +19,21 @@
   font-weight: 600;
 }
 
+h2 {
+  margin-top: 5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+h5 {
+  margin-top: 5rem;
+  text-align: center;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
 p {
   text-align: center;
 }
@@ -55,6 +70,8 @@ p {
   transition: .2s ease-in-out;
   border-radius: 1.2rem;
 }
+
+
 
 .form-control:focus {
   border-color: #black;
@@ -120,6 +137,12 @@ button:hover {
 text-align: left;
 color:#9CB700;
 margin: 3px 0 1px 3px;
+}
+
+.formLabels-L{
+text-align: left;
+color:#9CB700;
+margin: 3px 0 1px 40px;
 }
 
 .link {

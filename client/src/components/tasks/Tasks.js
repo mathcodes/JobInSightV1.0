@@ -161,10 +161,10 @@ class Tasks extends Component {
         <div className="tasks-content">
           {this.props.tasks.map((val, ind) => {
             return (
-              <div className="tasks-item" key={val._id}>
+              <div className="tasks-item row" key={val._id}>
                 <input className="form-control" type="text" name="task" value={val.task}/>
                 <input onChange={this.toggleCheck} type="checkbox" checked={val.completed}/>
-                <button onClick={this.deleteTask} className="tasks-btn">Delete</button>
+                <button onClick={this.deleteTask} className="tasks-btn">X</button>
               </div>
             )
           })}

@@ -5,6 +5,7 @@ import "./style.css";
 
 class Register extends Component {
   state = {
+
     username: "",
     usernameError: "",
     email: "",
@@ -13,6 +14,7 @@ class Register extends Component {
     passwordError: "",
     confirmPassword: "",
     confirmPasswordError: "",
+
     errors: {},
     redirect: false,
   };
@@ -82,11 +84,13 @@ class Register extends Component {
         console.log(err.message);
       }
     }
+
   };
   // ************************************************** //
   // *********************RENDERING******************** //
   // ************************************************** //
   // ************************************************** //
+
   render() {
     const { redirect } = this.state;
     if (redirect) {
@@ -102,13 +106,16 @@ class Register extends Component {
           <div className="form-container">
             <form onSubmit={this.onSubmit} className="register-form">
               <div className="form-group">
+
                 <p className="formLabels">User Name:</p>
+
                 <input
                   autocomplete="nope"
                   type="text"
                   name="username"
                   value={username}
                   onChange={this.handleChange}
+
                   className="form-control"
                 />
                 <small>{this.state.usernameError}</small>
@@ -205,6 +212,7 @@ class Register extends Component {
             <Link className="link" to="/login">
               Sign In
             </Link>
+
           </p>
         </div>
       </React.Fragment>

@@ -30,12 +30,12 @@
 }
 
 .photos-img {
-  width: 349px;
+  width: auto;
   height: 190px;
   border-radius: 5px;
   margin-top: 5px;
-  margin-left: 2px;
-  border: 4px solid rgb(255, 217, 0);
+  margin-left: 5px;
+  border: 2px solid black;
 }
 
 .photos-pic input {
