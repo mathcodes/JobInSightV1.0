@@ -97,7 +97,7 @@ class Register extends Component {
       <React.Fragment>
         <div className="register-container">
           <div className="form-header">
-            <h1>Dev Challenge</h1>
+            <h1>Create an account<br></br>and build your profile </h1>
           </div>
           <div className="form-container">
             <form onSubmit={this.onSubmit} className="register-form">
@@ -147,6 +147,53 @@ class Register extends Component {
                   className="form-control"
                 />
                 <small>{this.state.confirmPasswordError}</small>
+              </div>
+
+              <div className="form-group">
+                <p className="formLabels">Goal:</p>
+                <select className="form-control">
+                  <option value="find a job"></option>
+                  <option value="find a job">Find a Job</option>
+                  <option value="find a school">Find a School</option>
+                  <option value="find resources based on my interest">
+                    Find resources based on my Interest
+                </option>
+                </select>
+                {/* <small>{this.state.confirmPasswordError}</small> */}
+              </div>
+
+              <div className="form-group">
+                <p className="formLabels">Interests:</p>
+                <input
+                  type="text"
+                  name="interest2"
+                  // value={confirmPassword}
+                  onChange={this.handleChange}
+                  className="form-control"
+                />
+                {/* <small>{this.state.confirmPasswordError}</small> */}
+              </div>
+              <div className="form-group">
+                <p className="formLabels">Hardware 1:</p>
+                <input
+                  type="text"
+                  name="hardware1"
+                  // value={confirmPassword}
+                  onChange={this.handleChange}
+                  className="form-control"
+                />
+                {/* <small>{this.state.confirmPasswordError}</small> */}
+              </div>
+              <div className="form-group">
+                <p className="formLabels">Hardware 2:</p>
+                <input
+                  type="text"
+                  name="hardware2"
+                  // value={confirmPassword}
+                  onChange={this.handleChange}
+                  className="form-control"
+                />
+                {/* <small>{this.state.confirmPasswordError}</small> */}
               </div>
               <button type="submit" className="register-btn">
                 LOGIN
