@@ -83,10 +83,7 @@ class Register extends Component {
       }
     }
   };
-  // ************************************************** //
-  // *********************RENDERING******************** //
-  // ************************************************** //
-  // ************************************************** //
+
   render() {
     const { redirect } = this.state;
     if (redirect) {
@@ -102,7 +99,6 @@ class Register extends Component {
           <div className="form-container">
             <form onSubmit={this.onSubmit} className="register-form">
               <div className="form-group">
-                <p className="formLabels">User Name:</p>
                 <input
                   autocomplete="nope"
                   type="text"
@@ -110,11 +106,11 @@ class Register extends Component {
                   value={username}
                   onChange={this.handleChange}
                   className="form-control"
+                  placeholder="Username"
                 />
                 <small>{this.state.usernameError}</small>
               </div>
               <div className="form-group">
-                <p className="formLabels">Email Address:</p>
                 <input
                   autocomplete="nope"
                   type="email"
@@ -122,11 +118,11 @@ class Register extends Component {
                   value={email}
                   onChange={this.handleChange}
                   className="form-control"
+                  placeholder="Email"
                 />
                 <small>{this.state.emailError}</small>
               </div>
               <div className="form-group">
-                <p className="formLabels">Password:</p>
                 <input
                   autocomplete="nope"
                   type="password"
@@ -134,28 +130,30 @@ class Register extends Component {
                   value={password}
                   onChange={this.handleChange}
                   className="form-control"
+                  placeholder="Password"
                 />
                 <small>{this.state.passwordError}</small>
               </div>
               <div className="form-group">
-                <p className="formLabels">Confirm Password:</p>
                 <input
                   type="password"
                   name="confirmPassword"
                   value={confirmPassword}
                   onChange={this.handleChange}
                   className="form-control"
+                  placeholder="Confirm password"
                 />
                 <small>{this.state.confirmPasswordError}</small>
               </div>
               <button type="submit" className="register-btn">
-                LOGIN
+                Register
               </button>
             </form>
           </div>
-          <p className="linkBtn">
+          <p>
             Already registered?
             <Link className="link" to="/login">
+              {" "}
               Sign In
             </Link>
           </p>

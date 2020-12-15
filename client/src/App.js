@@ -9,16 +9,14 @@ import axios from "axios";
 import auth from "./components/auth/auth";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import News from "./components/news/News";
-import Sport from "./components/sport/Sport";
 import Tasks from "./components/tasks/Tasks";
 import Photos from "./components/photos/Photos";
 
 class App extends Component {
   state = {
-    sportData: {
-      teamName: "",
-    },
+    // sportData: {
+    //   teamName: ''
+    // },
     tasksData: {
       tasks: [],
     },
@@ -26,27 +24,27 @@ class App extends Component {
     loggedInStatus: "NOT_LOGGED_IN",
   };
 
-  getTeamName = async () => {
-    // get favourite team name from api
-    try {
-      const res = await axios.get("/api/news/sport/team", {
-        headers: {
-          Authorization: localStorage.getItem("token"),
-        },
-      });
-      if (res.status === 200) {
-        // set teamName
-        const teamName = res.data.team;
-        this.setState({
-          sportData: {
-            teamName: res.data.team || "",
-          },
-        });
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // getTeamName = async () => {
+  //   // get favourite team name from api
+  //   try {
+  //     const res = await axios.get('/api/news/sport/team', {
+  //       headers: {
+  //         'Authorization': localStorage.getItem('token')
+  //       }
+  //     });
+  //     if (res.status === 200) {
+  //       // set teamName
+  //       const teamName = res.data.team;
+  //       this.setState({
+  //         sportData: {
+  //           teamName: res.data.team || ""
+  //         }
+  //       });
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
 
   componentDidMount() {
     this.getImageData();
@@ -197,26 +195,10 @@ class App extends Component {
                 render={(props) => (
                   <Dashboard
                     {...props}
-                    teamName={this.state.sportData.teamName}
                     tasks={this.state.tasksData.tasks}
-                    getTeamName={this.getTeamName}
                     getTasksData={this.getTasksData}
                     imageData={this.state.imageData}
                     getImageData={this.getImageData}
-                  />
-                )}
-              />
-              <Route path="/news" component={News} />
-              <Route
-                path="/sport"
-                render={(props) => (
-                  <Sport
-                    {...props}
-                    sportGoodRequest={sportGoodRequest}
-                    sportBadRequest={sportBadRequest}
-                    getTeamName={this.getTeamName}
-                    teamName={this.state.sportData.teamName}
-                    triggerParentUpdate={this.updateSportData}
                   />
                 )}
               />
