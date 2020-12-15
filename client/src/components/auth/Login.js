@@ -87,7 +87,7 @@ class Login extends Component {
                   className="form-control" 
                   placeholder="Password"/>
               </div>
-              <button type="submit" className="login-btn"/>
+              <button type="submit" className="login-btn">Login</button>
             </form>
           </div>
           <p>New to the challenge? 

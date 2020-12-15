@@ -143,11 +143,12 @@ class Register extends Component {
                   placeholder="Confirm password"/>
                   <small>{this.state.confirmPasswordError}</small>
               </div>
-              <button type="submit" className="register-btn" />
+              <button type="submit" className="register-btn">Register</button>
             </form>
           </div>
           <p>Already registered? 
-            <Link className="link" to="/login"> Sign In</Link></p>
+            <Link className="link" to="/login"> Sign In</Link>
+          </p>
         </div>
       </React.Fragment>
     )
