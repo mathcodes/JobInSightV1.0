@@ -44,7 +44,7 @@ const upload = multer({
 // Check file type
 function checkFileType(file, cb) {
   // Allowed ext
-  const filetypes = /jpeg|jpg|png|gif/;
+  const filetypes = /jpeg|jpg|png|gif|pdf/;
   // Check ext
   const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
   // Check mime
@@ -164,8 +164,6 @@ app.use(express.static('./public'));
 
 // Routers
 const users = require('./routes/users');
-const news = require('./routes/news');
-const clothes = require('./routes/clothes');
 const tasks = require('./routes/tasks');
 const photos = require('./routes/photos');
 
@@ -184,8 +182,6 @@ app.use(bodyParser.json())
 
 // Routes
 app.use('/api/users', users);
-app.use('/api/news', news);
-app.use('/api/clothes', clothes);
 app.use('/api/tasks', tasks);
 app.use('/api/photos', photos);
 

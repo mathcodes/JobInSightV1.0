@@ -22,33 +22,49 @@
   position: relative;
 }
 
-.tasks-content .form-control {
-  outline: 0;
-  border: none;
-  border-width: 0 0 2px;
-  border-color: #fff;
-  border-bottom: 3px solid #fff;
-  background-color: transparent;
+.form-control {
+  border-width: 5px;
+  border-color: black;
   font-size: 1rem;
-  margin: 4rem 2rem;
-  width: 30rem;
+  /* margin: 4rem 2rem; */
+ 
+  border: 3px solid;
+  color:black;
+  background-color: white;
+  font-size: 1rem;
+  /* margin: 4rem 2rem; */
+  width:25rem;
+  height: 2rem;
+  padding:3px 0px 3px 10px ;
+  /* animates rounded corners when you're done typing */
+  transition: 2.0s ease-in-out;
+  border-radius: 1.2rem;
+}
+
+
+
+.form-control:focus {
+  border-color: #black;
+  border-radius: 0rem;
 }
 
 .tasks-content img {
   width: 10px;
-  margin: 2rem 0;
+  margin: 2rem;
   position: relative;
 }
 
 .tasks-btn {
   border-radius: 10px;
-  height: 40px;
-  width: 60px;
+  height: 2rem;
+  width: 2rem;
+
   color: #fff;
   background-color: tomato;
   border: 1px solid #ccc;
   cursor: pointer;
   margin-left: 4rem;
+  margin-bottom:4px;
 }
 
 .tasks-content .tasks-btn:hover {
@@ -61,7 +77,7 @@
 .tasks-form-container input[type="text"] {
   display: block;
   margin: 0 auto;
-  font-size: 3.2rem;
+  font-size: 1.2rem;
 }
 
 .tasks-content input[type='checkbox'] {
@@ -125,14 +141,14 @@ input:-webkit-autofill:active {
 
   .tasks-btn {
     border-radius: 10px;
-    height: 40px;
-    width: 60px;
+    height: 2rem;
     color: #fff;
     background-color: tomato;
     border: 1px solid #ccc;
     cursor: pointer;
-    margin-right: 2rem;
+    margin: 10;
     float: right;
+    padding: 20px;
   }
 
   .tasks-content {

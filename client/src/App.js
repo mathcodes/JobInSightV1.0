@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -7,6 +8,21 @@ import Login from "./components/auth/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 import axios from "axios";
 import auth from "./components/auth/auth";
+=======
+import React, { Component } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Dashboard from './components/dashboard/Dashboard';
+import axios from 'axios';
+import auth from './components/auth/auth';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Tasks from './components/tasks/Tasks';
+import Photos from './components/photos/Photos';
+>>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import News from "./components/news/News";
@@ -16,9 +32,15 @@ import Photos from "./components/photos/Photos";
 
 class App extends Component {
   state = {
+<<<<<<< HEAD
     sportData: {
       teamName: "",
     },
+=======
+    // sportData: {
+    //   teamName: ''
+    // },
+>>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
     tasksData: {
       tasks: [],
     },
@@ -26,6 +48,7 @@ class App extends Component {
     loggedInStatus: "NOT_LOGGED_IN",
   };
 
+<<<<<<< HEAD
   getTeamName = async () => {
     // get favourite team name from api
     try {
@@ -47,6 +70,29 @@ class App extends Component {
       console.log(err);
     }
   };
+=======
+  // getTeamName = async () => {
+  //   // get favourite team name from api
+  //   try {
+  //     const res = await axios.get('/api/news/sport/team', {
+  //       headers: {
+  //         'Authorization': localStorage.getItem('token')
+  //       }
+  //     });
+  //     if (res.status === 200) {
+  //       // set teamName
+  //       const teamName = res.data.team;
+  //       this.setState({
+  //         sportData: {
+  //           teamName: res.data.team || ""
+  //         }
+  //       });
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }
+>>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
 
   componentDidMount() {
     this.getImageData();
@@ -113,10 +159,17 @@ class App extends Component {
   };
 
   notFoundStyle = {
+<<<<<<< HEAD
     margin: "10rem",
     color: "#8b0000",
   };
 
+=======
+    margin: '10rem',
+    color: '#8b0000'
+  }
+                                           
+>>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
   render() {
     // Toast Notifications
     toast.configure({ autoClose: 2000, draggable: false });
@@ -167,6 +220,7 @@ class App extends Component {
       });
 
     return (
+<<<<<<< HEAD
       <Router>
         <div className="App">
           <div className="container">
@@ -250,6 +304,31 @@ class App extends Component {
                     taskEditBadRequest={taskEditBadRequest}
                   />
                 )}
+=======
+    <Router>
+      <div className="App">
+        <div className="container">
+          <Switch>
+            <Route
+              exact
+              path="/(login|)/"
+              render={(props) => <Login {...props} 
+              loginGoodRequest={loginGoodRequest} 
+              loginBadRequest={loginBadRequest} />} 
+            />
+            <Route path="/register"
+              render={(props) => <Register {...props}
+              registerGoodRequest={registerGoodRequest}
+              registerBadRequest={registerBadRequest}/>}
+            />
+            <Route path="/dashboard"
+              render={(props) => <Dashboard {...props} teamName={this.state.sportData.teamName} tasks={this.state.tasksData.tasks}
+              getTeamName={this.getTeamName} getTasksData={this.getTasksData} imageData={this.state.imageData} getImageData={this.getImageData}/>  }
+            />
+            <Route path="/photos" 
+              render={ (props) => <Photos {...props} photoGoodRequest={photoGoodRequest} photoBadRequest={photoBadRequest} triggerParentUpdate={this.updateImageData}
+                      imageData={this.state.imageData} getImageData={this.getImageData}/>} />
+>>>>>>> bd131d48c4ef24ee51566feca8549d1c38e58000
               />
               <Route path="*" component={() => <h1 style={this.notFoundStyle}>404 Not Found</h1>} />
             </Switch>
