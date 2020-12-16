@@ -46,10 +46,8 @@ class Login extends Component {
         errorMessage: "Invalid username or password",
       });
       this.props.loginBadRequest();
-
-    
-      }
-  }
+    }
+  };
 
   render() {
     const { redirect } = this.state;
@@ -61,10 +59,12 @@ class Login extends Component {
     return (
       <React.Fragment>
         <div className="register-container">
-          <div className="form-header">
-            <h1>Dev Challenge</h1>
+          <div className="form-header text-light text-md-right text-center banner">
+            <h2 className="banner-par">Welcome to</h2>
+            <h1 className="lead banner-heading">J o b I n S i g h t</h1>
           </div>
-          <div className="form-container">
+         
+          <div className="form-container-login">
             <form className="login-form" onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <input
@@ -100,7 +100,6 @@ class Login extends Component {
               Sign Up
             </Link>
           </p>
-
         </div>
       </React.Fragment>
     );

@@ -12,7 +12,7 @@
 }
 
 .form-header h1 {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   text-align: center;
   color: #fff;
   font-size: 3.6rem;
@@ -38,18 +38,33 @@ p {
   text-align: center;
 }
 
-.form-container {
-  margin-top: 6rem;
+.form-container-register {
+  margin-top: 20rem;
   display: grid;
   grid-template-rows: 1fr;
 }
 
-.register-form, .login-form {
+.form-container-login {
+  /* margin-top:20%; */
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.register-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0rem;
   margin-top: 4rem;
   margin: 0 auto;
+  color:black;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0rem;
+  margin-top: 14rem;
+  /* margin: 0 auto; */
   color:black;
 }
 .form-control {
@@ -74,7 +89,7 @@ p {
 
 
 .form-control:focus {
-  border-color: #black;
+  border-color: black;
   border-radius: 0rem;
 }
 
@@ -177,3 +192,40 @@ small {
     margin: 0 auto;
   }
 }
+/* ******************** */
+/* ****** banner ****** */
+/* ******************** */
+.banner {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+/* bannerTop */
+.banner-heading {
+  animation-name: anim;
+  animation-duration: 4s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+/* bannerHeading */
+.banner-par {
+  animation-name: anim;
+  animation-duration: 4s;
+  
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* ******************** */
+/* **** end banner **** */
+/* ******************** */

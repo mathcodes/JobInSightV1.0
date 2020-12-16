@@ -189,8 +189,8 @@ class App extends Component {
               registerBadRequest={registerBadRequest}/>}
             />
             <Route path="/dashboard"
-              render={(props) => <Dashboard {...props} teamName={this.state.sportData.teamName} tasks={this.state.tasksData.tasks}
-              getTeamName={this.getTeamName} getTasksData={this.getTasksData} imageData={this.state.imageData} getImageData={this.getImageData}/>  }
+              render={(props) => <Dashboard {...props} tasks={this.state.tasksData.tasks}
+               getTasksData={this.getTasksData} imageData={this.state.imageData} getImageData={this.getImageData}/>  }
             />
             <Route path="/photos" 
               render={ (props) => <Photos {...props} photoGoodRequest={photoGoodRequest} photoBadRequest={photoBadRequest} triggerParentUpdate={this.updateImageData}

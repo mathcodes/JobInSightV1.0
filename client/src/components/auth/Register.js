@@ -103,7 +103,7 @@ class Register extends Component {
           <div className="form-header">
             <h1>Create an account<br></br>and build your profile </h1>
           </div>
-          <div className="form-container">
+          <div className="form-container-register">
             <form onSubmit={this.onSubmit} className="register-form">
               <div className="form-group">
 
